@@ -7,10 +7,10 @@
 #include <algorithm>
 #include <numeric>
 
-void birth = [](std::iterator it){it->birthday();};
+void birth = [](Human* h){h->birthday();};
 
-char monster= [](std::iterator it){
-    if(it->isMonster())
+char monster= [](Human* h){
+    if(h->isMonster())
     {
         return 'n';
     }
