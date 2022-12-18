@@ -7,9 +7,9 @@
 #include <algorithm>
 #include <numeric>
 
-void birth(iterator it){it->birthday();};
+void birth = [](std::iterator it){it->birthday();};
 
-char monster(iterator it){
+char monster= [](std::iterator it){
     if(it->isMonster())
     {
         return 'n';
@@ -30,34 +30,5 @@ std::vector< char > foo(std::list< Human >& people)
        //sprawdzenie is monster
        std::transform (people.begin(), people.end(), Goo.begin(),monster);
        std::reverse(Goo.begin(), Goo.end());
-
-
-
-
-
-
-
-
-
-
-
-       /*
-       for(auto it = people.begin();it != people.end();it++)
-       {
-           it->birthday();
-        if(i>=0)
-        {
-           if(it->isMonster())
-           {
-               Goo[i] = 'n';
-           }
-           else
-           {
-               Goo[i] = 'y';
-           }
-           i--;
-        }
-       }
-*/
     return Goo;
 }
